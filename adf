@@ -1,0 +1,107 @@
+[33mcommit f4491ab7626562ccbda236b6b5f5475ab3c169b6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mxander[m[33m)[m
+Author: Xander <alexander.ingalliner@nwciowa.edu>
+Date:   Wed Sep 25 12:53:11 2024 -0500
+
+    Added Walk animation and Collision Box
+
+[33mcommit eee7db71a446fb123b82ef9c4c3eb288ea0c1fa3[m
+Author: Xander <alexander.ingalliner@nwciowa.edu>
+Date:   Mon Sep 23 12:54:57 2024 -0500
+
+    Added Character and animation basics
+
+[33mcommit 4a14211eaba7b22b371781f47534edf9bc9f12ec[m
+Author: Xander <alexander.ingalliner@nwciowa.edu>
+Date:   Mon Sep 23 12:04:10 2024 -0500
+
+    Finished test stage borders
+
+[33mcommit 052b201d3124115fbe8dffda3bbd2b29cdae0cd9[m
+Merge: e51e4a8 7a38646
+Author: Arthur Vicente <128561167+arthurpvicente@users.noreply.github.com>
+Date:   Fri Sep 20 13:26:49 2024 -0500
+
+    Merge pull request #1 from CSC321Fa2024/xander
+    
+    Added map image, floor and started adding walls
+
+[33mcommit 7a38646c6c6416104feaebdd7531570ec53c88f1[m
+Author: Xander <alexander.ingalliner@nwciowa.edu>
+Date:   Fri Sep 20 12:53:17 2024 -0500
+
+    Added map image, floor and started adding walls
+
+[33mcommit e51e4a84f0aab3ee03a6174ff3ac1a3497d6bac2[m
+Merge: 254c695 9566f7b
+Author: Xander <alexander.ingalliner@nwciowa.edu>
+Date:   Fri Sep 20 12:33:06 2024 -0500
+
+    merge remote to local
+
+[33mcommit 9566f7be5aad66a9037a3df4a74b9db4cf11fa2d[m
+Author: Sampurno <abraham.sampurno@nwciowa.edu>
+Date:   Fri Sep 20 12:02:20 2024 -0500
+
+    Deleted the old test bg, added the new one
+
+[33mcommit d21918146554946896dc5be9236c659580165e9c[m
+Merge: 17d9a59 c633498
+Author: Sampurno <abraham.sampurno@nwciowa.edu>
+Date:   Fri Sep 20 11:59:26 2024 -0500
+
+    Merge branch 'main' of https://github.com/CSC321Fa2024/final-project-scuffle
+
+[33mcommit 254c695e7cd37b6e75fa93f9a22962481bfbb624[m
+Merge: b0b9c3f c633498
+Author: Xander <alexander.ingalliner@nwciowa.edu>
+Date:   Fri Sep 20 11:54:04 2024 -0500
+
+    Merge branch 'main' of https://github.com/CSC321Fa2024/final-project-scuffle
+
+[33mcommit c633498cc9540d30e6c672b80c9267fa4056f01d[m
+Author: arthur <arthur.vicente@nwciowa.edu>
+Date:   Wed Sep 18 13:47:13 2024 -0500
+
+    Added audio folder
+
+[33mcommit 5d79009bba2bc54a237a85aabf4bcbd1cd1590e4[m
+Author: arthur <arthur.vicente@nwciowa.edu>
+Date:   Wed Sep 18 13:45:28 2024 -0500
+
+    Updated projects settings
+
+[33mcommit b0b9c3fcfd65388995346025bea016a3ed13e0a2[m
+Author: Xander <alexander.ingalliner@nwciowa.edu>
+Date:   Wed Sep 18 12:51:22 2024 -0500
+
+    updated project settings
+
+[33mcommit 17d9a5905f9152836a6ac282db659d1ad3ddf62e[m
+Author: Sampurno <abraham.sampurno@nwciowa.edu>
+Date:   Wed Sep 18 12:33:52 2024 -0500
+
+    Added test background
+
+[33mcommit 60c10aca1bc6c294b414591687d8199db31899ac[m
+Author: Xander <alexander.ingalliner@nwciowa.edu>
+Date:   Wed Sep 18 12:20:05 2024 -0500
+
+    added Scenes and Assets folder
+
+[33mcommit b1646a92ec7722c7249d47499be34d68e565b375[m
+Author: Xander <alexander.ingalliner@nwciowa.edu>
+Date:   Wed Sep 18 12:11:57 2024 -0500
+
+    added scripts folder
+
+[33mcommit 52d37f730a30f9f835708e6a760e3bafad1fd0a8[m
+Author: landon <landon.vanberkum@nwciowa.edu>
+Date:   Mon Sep 16 13:20:59 2024 -0500
+
+    initialized project
+
+[33mcommit d40a41d45b8d15914df0a0c56d08bed163e411cc[m
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Mon Sep 16 17:19:00 2024 +0000
+
+    add deadline

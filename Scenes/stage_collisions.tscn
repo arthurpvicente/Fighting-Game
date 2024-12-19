@@ -1,0 +1,107 @@
+[gd_scene load_steps=8 format=3 uid="uid://bdpmr5iwwxgis"]
+
+[ext_resource type="Texture2D" uid="uid://cq0yr7gqd4lif" path="res://Assets/Pictures/Platform.png" id="1_eugo7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10j7q"]
+size = Vector2(460, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5urix"]
+size = Vector2(460, 30)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_wvhti"]
+a = Vector2(1128, -8)
+b = Vector2(-808, -8)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_iu286"]
+a = Vector2(-3, 233)
+b = Vector2(-3, -623)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1c5q6"]
+a = Vector2(176, -47.9996)
+b = Vector2(-1792, -48.0045)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ynn8j"]
+a = Vector2(56, -32)
+b = Vector2(-1056, -31.9989)
+
+[node name="StageCollisions" type="Node2D"]
+position = Vector2(0, -114)
+
+[node name="Platform_L" type="StaticBody2D" parent="."]
+modulate = Color(0.290196, 0.360784, 0.729412, 1)
+self_modulate = Color(0.356863, 0.470588, 0.572549, 1)
+collision_layer = 4
+metadata/_edit_group_ = true
+
+[node name="Platform" type="Sprite2D" parent="Platform_L"]
+modulate = Color(0.462407, 0.39556, 0.553248, 1)
+self_modulate = Color(0.892762, 0.89913, 0.675241, 1)
+position = Vector2(460.5, 644.5)
+scale = Vector2(5.768, 2.95)
+texture = ExtResource("1_eugo7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform_L"]
+position = Vector2(460, 640)
+shape = SubResource("RectangleShape2D_10j7q")
+
+[node name="Platform_M" type="StaticBody2D" parent="."]
+position = Vector2(486, 180)
+collision_layer = 4
+metadata/_edit_group_ = true
+
+[node name="Platform" type="Sprite2D" parent="Platform_M"]
+position = Vector2(460.5, 644.5)
+scale = Vector2(5.768, 2.95)
+texture = ExtResource("1_eugo7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform_M"]
+position = Vector2(460, 640)
+shape = SubResource("RectangleShape2D_10j7q")
+
+[node name="Platform_R" type="StaticBody2D" parent="."]
+position = Vector2(-2, 0)
+collision_layer = 4
+metadata/_edit_group_ = true
+
+[node name="Platform2" type="Sprite2D" parent="Platform_R"]
+position = Vector2(1432, 644.5)
+scale = Vector2(5.768, 2.95)
+texture = ExtResource("1_eugo7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform_R"]
+position = Vector2(1432, 639)
+shape = SubResource("RectangleShape2D_5urix")
+
+[node name="Floor - Static Body" type="StaticBody2D" parent="."]
+position = Vector2(791, 944)
+collision_layer = 2
+metadata/_edit_group_ = true
+
+[node name="Floor" type="CollisionShape2D" parent="Floor - Static Body"]
+shape = SubResource("SegmentShape2D_wvhti")
+
+[node name="LeftWall - Static Body" type="StaticBody2D" parent="."]
+position = Vector2(3, 736)
+collision_layer = 2
+metadata/_edit_group_ = true
+
+[node name="LeftWall" type="CollisionShape2D" parent="LeftWall - Static Body"]
+shape = SubResource("SegmentShape2D_iu286")
+
+[node name="Roof - Static Body" type="StaticBody2D" parent="."]
+position = Vector2(168, 66)
+collision_layer = 2
+metadata/_edit_group_ = true
+
+[node name="Roof" type="CollisionShape2D" parent="Roof - Static Body"]
+rotation = 3.14159
+shape = SubResource("SegmentShape2D_1c5q6")
+
+[node name="Right Wall - Static Body" type="StaticBody2D" parent="."]
+position = Vector2(1952, 170)
+collision_layer = 2
+metadata/_edit_group_ = true
+
+[node name="RightWall" type="CollisionShape2D" parent="Right Wall - Static Body"]
+rotation = 4.71239
+shape = SubResource("SegmentShape2D_ynn8j")

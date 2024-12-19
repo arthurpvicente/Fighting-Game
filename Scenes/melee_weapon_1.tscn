@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://sj8d87pndec0"]
+
+[ext_resource type="Texture2D" uid="uid://cm85c11bo72k4" path="res://Assets/Pictures/test_sword.png" id="1_rjhxw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0cxm"]
+size = Vector2(52, 37)
+
+[node name="MeleeWeapon1" type="Area2D"]
+position = Vector2(50, -10)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_rjhxw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 0.5)
+shape = SubResource("RectangleShape2D_n0cxm")

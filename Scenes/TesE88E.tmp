@@ -1,0 +1,245 @@
+[gd_scene load_steps=34 format=3 uid="uid://mgnim6mgium3"]
+
+[ext_resource type="Texture2D" uid="uid://ct4d5sdrionhs" path="res://Assets/Pictures/burgerfat.png" id="1_bsnaq"]
+[ext_resource type="PackedScene" uid="uid://sj8d87pndec0" path="res://Scenes/melee_weapon_1.tscn" id="4_g3r8g"]
+[ext_resource type="Script" path="res://Scripts/Player2.gd" id="4_ok2f1"]
+[ext_resource type="PackedScene" uid="uid://s4ffkimri2te" path="res://Scenes/ranged_weapon_1.tscn" id="5_k77rj"]
+[ext_resource type="PackedScene" uid="uid://bdpmr5iwwxgis" path="res://Scenes/stage_collisions.tscn" id="5_qdogj"]
+[ext_resource type="PackedScene" uid="uid://bj7ltgybrstb5" path="res://Scenes/Player.tscn" id="5_qj5pw"]
+[ext_resource type="Script" path="res://Scripts/Player1HealthBar.gd" id="5_w5kkp"]
+[ext_resource type="Script" path="res://Scripts/Player2HealthBar.gd" id="6_5j7ec"]
+[ext_resource type="PackedScene" uid="uid://b6jo671k4738w" path="res://Scenes/bullet.tscn" id="6_iifja"]
+[ext_resource type="PackedScene" uid="uid://cgxukeu18sdtv" path="res://Scenes/bullet2.tscn" id="8_6ywex"]
+[ext_resource type="Script" path="res://Scripts/health_pack.gd" id="9_4frya"]
+[ext_resource type="Texture2D" uid="uid://bw5rijmefjucu" path="res://Assets/Pictures/test_healthpack.png" id="9_gggco"]
+[ext_resource type="Texture2D" uid="uid://u8cfvbswaf16" path="res://Assets/Pictures/Player2WinLogo.png" id="11_sysci"]
+[ext_resource type="Texture2D" uid="uid://cukprwldfmyw0" path="res://Assets/Pictures/Player1WinLogo.png" id="12_jv6ot"]
+[ext_resource type="Script" path="res://Scenes/blue_laser_rifle.gd" id="15_n3t1d"]
+[ext_resource type="Texture2D" uid="uid://34ov8ts8qhri" path="res://Assets/Pictures/Weapon/Ranged/Blue Laser Rifle.png" id="16_0r0od"]
+[ext_resource type="Script" path="res://Scenes/red_rifle.gd" id="17_iql8m"]
+[ext_resource type="Texture2D" uid="uid://cqbvywcsncnme" path="res://Assets/Pictures/Weapon/Ranged/Red Laser Rifle.png" id="18_pjmwc"]
+[ext_resource type="Script" path="res://Scenes/blue_saber.gd" id="19_scxqk"]
+[ext_resource type="Texture2D" uid="uid://crk4y4dyb3h4c" path="res://Assets/Pictures/Weapon/Melee/Blue Saber.png" id="20_7ynk1"]
+[ext_resource type="Script" path="res://Scenes/red_saber.gd" id="21_5frbd"]
+[ext_resource type="Texture2D" uid="uid://b8ryyxkmr207i" path="res://Assets/Pictures/Weapon/Melee/Red Saber.png" id="21_jvws7"]
+[ext_resource type="AudioStream" uid="uid://cmfyxcgnqcbhs" path="res://Assets/Audio/jump.wav" id="23_h1n6r"]
+[ext_resource type="AudioStream" uid="uid://oedy4dsm84ir" path="res://Assets/Audio/gettingHealed.mp3" id="24_3wg3w"]
+[ext_resource type="AudioStream" uid="uid://npsl16fblkh2" path="res://Assets/Audio/laserHit.mp3" id="25_uu7qr"]
+
+[sub_resource type="GDScript" id="GDScript_sm4w2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_holy6"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ndwpr"]
+bg_color = Color(0.406539, 0.501479, 0.893261, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4fox2"]
+size = Vector2(40, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5y0e"]
+size = Vector2(83, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7kde"]
+size = Vector2(80, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwhsu"]
+size = Vector2(10, 82)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwigc"]
+size = Vector2(6, 75)
+
+[node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_sm4w2")
+
+[node name="TestBg2" type="Sprite2D" parent="."]
+position = Vector2(957, 773.5)
+scale = Vector2(2.59536, 5.90385)
+texture = ExtResource("1_bsnaq")
+
+[node name="Player1" parent="." groups=["Player"] instance=ExtResource("5_qj5pw")]
+position = Vector2(408, 463)
+collision_mask = 6
+
+[node name="MeleeWeapon1" parent="Player1" instance=ExtResource("4_g3r8g")]
+visible = false
+collision_mask = 8
+
+[node name="RangedWeapon1" parent="Player1" instance=ExtResource("5_k77rj")]
+visible = false
+
+[node name="Bullet1" parent="Player1/RangedWeapon1" instance=ExtResource("6_iifja")]
+position = Vector2(-30, -1105.56)
+
+[node name="Timer1" type="Timer" parent="Player1"]
+
+[node name="Player2" parent="." groups=["Player"] instance=ExtResource("5_qj5pw")]
+position = Vector2(1290, 461)
+collision_layer = 8
+collision_mask = 6
+script = ExtResource("4_ok2f1")
+
+[node name="MeleeWeapon2" parent="Player2" instance=ExtResource("4_g3r8g")]
+visible = false
+collision_layer = 8
+
+[node name="RangedWeapon2" parent="Player2" instance=ExtResource("5_k77rj")]
+visible = false
+
+[node name="Bullet2" parent="Player2/RangedWeapon2" instance=ExtResource("8_6ywex")]
+
+[node name="Timer2" type="Timer" parent="Player2"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 539)
+
+[node name="Player1HealthBar" type="ProgressBar" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 784.0
+offset_bottom = 120.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_holy6")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ndwpr")
+value = 50.0
+script = ExtResource("5_w5kkp")
+
+[node name="Player2HealthBar" type="ProgressBar" parent="."]
+offset_left = 1129.0
+offset_top = 14.0
+offset_right = 1905.0
+offset_bottom = 126.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_holy6")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ndwpr")
+value = 50.0
+script = ExtResource("6_5j7ec")
+
+[node name="StageCollisions" parent="." instance=ExtResource("5_qdogj")]
+
+[node name="HealthPack" type="Area2D" parent="."]
+position = Vector2(943, 641)
+collision_mask = 9
+script = ExtResource("9_4frya")
+metadata/_edit_group_ = true
+
+[node name="TestHealthpack" type="Sprite2D" parent="HealthPack"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_gggco")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealthPack"]
+shape = SubResource("RectangleShape2D_4fox2")
+
+[node name="HealthPackInterval" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
+
+[node name="Player1WinLogo" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1000, 500)
+texture = ExtResource("12_jv6ot")
+
+[node name="Player2WinLogo" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1000, 500)
+texture = ExtResource("11_sysci")
+
+[node name="BlueRifle" type="Area2D" parent="."]
+script = ExtResource("15_n3t1d")
+metadata/_edit_group_ = true
+
+[node name="BlueLaserRifle" type="Sprite2D" parent="BlueRifle"]
+position = Vector2(115, -65)
+texture = ExtResource("16_0r0od")
+
+[node name="Timer" type="Timer" parent="BlueRifle"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlueRifle"]
+position = Vector2(116.5, -69)
+shape = SubResource("RectangleShape2D_n5y0e")
+
+[node name="RedRifle" type="Area2D" parent="."]
+collision_mask = 8
+script = ExtResource("17_iql8m")
+metadata/_edit_group_ = true
+
+[node name="RedRifle" type="Sprite2D" parent="RedRifle"]
+position = Vector2(1753, -57)
+scale = Vector2(0.959998, 0.994)
+texture = ExtResource("18_pjmwc")
+
+[node name="Timer" type="Timer" parent="RedRifle"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedRifle"]
+position = Vector2(1756, -60.5)
+shape = SubResource("RectangleShape2D_j7kde")
+
+[node name="BlueSaber" type="Area2D" parent="."]
+position = Vector2(519, -61)
+script = ExtResource("19_scxqk")
+metadata/_edit_group_ = true
+
+[node name="BlueLightSaber" type="Sprite2D" parent="BlueSaber"]
+position = Vector2(-9.00001, -18)
+scale = Vector2(1.5575, 1.283)
+texture = ExtResource("20_7ynk1")
+
+[node name="Timer" type="Timer" parent="BlueSaber"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlueSaber"]
+position = Vector2(-9, -31)
+shape = SubResource("RectangleShape2D_xwhsu")
+
+[node name="RedSaber" type="Area2D" parent="."]
+position = Vector2(1179, -65)
+collision_mask = 8
+script = ExtResource("21_5frbd")
+metadata/_edit_group_ = true
+
+[node name="RedLightSaber" type="Sprite2D" parent="RedSaber"]
+position = Vector2(4, -28)
+scale = Vector2(1.08, 1.164)
+texture = ExtResource("21_jvws7")
+
+[node name="Timer" type="Timer" parent="RedSaber"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedSaber"]
+position = Vector2(3, -43.5)
+shape = SubResource("RectangleShape2D_wwigc")
+
+[node name="sfx_jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("23_h1n6r")
+volume_db = -16.0
+
+[node name="sfx_healing" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("24_3wg3w")
+volume_db = -16.0
+
+[node name="sfx_laserhit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("25_uu7qr")
+volume_db = -16.0
+
+[connection signal="changed_health" from="Player1" to="Player1HealthBar" method="_on_player_1_changed_health"]
+[connection signal="update_OtherPlayer" from="Player1" to="Player2" method="_on_player_1_update_other_player"]
+[connection signal="update_healthpack" from="Player1" to="HealthPack" method="_on_player_1_update_healthpack"]
+[connection signal="body_entered" from="Player1/MeleeWeapon1" to="Player2" method="_on_melee_weapon_1_body_entered"]
+[connection signal="body_exited" from="Player1/MeleeWeapon1" to="Player2" method="_on_melee_weapon_1_body_exited"]
+[connection signal="timeout" from="Player1/Timer1" to="Player1" method="_on_timer_1_timeout"]
+[connection signal="changed_health" from="Player2" to="Player2HealthBar" method="_on_player_2_changed_health"]
+[connection signal="update_OtherPlayer" from="Player2" to="Player1" method="_on_player_2_update_other_player"]
+[connection signal="update_healthpack" from="Player2" to="HealthPack" method="_on_player_2_update_healthpack"]
+[connection signal="body_entered" from="Player2/MeleeWeapon2" to="Player1" method="_on_melee_weapon_2_body_entered"]
+[connection signal="body_exited" from="Player2/MeleeWeapon2" to="Player1" method="_on_melee_weapon_2_body_exited"]
+[connection signal="timeout" from="Player2/Timer2" to="Player2" method="_on_timer_2_timeout"]
+[connection signal="body_entered" from="HealthPack" to="Player1" method="_on_health_pack_body_entered"]
+[connection signal="body_entered" from="HealthPack" to="Player2" method="_on_health_pack_body_entered"]
+[connection signal="timeout" from="HealthPackInterval" to="Player1" method="_on_health_pack_interval_timeout"]
+[connection signal="timeout" from="HealthPackInterval" to="Player2" method="_on_health_pack_interval_timeout"]
+[connection signal="timeout" from="HealthPackInterval" to="HealthPack" method="_on_health_pack_interval_timeout"]
+[connection signal="body_entered" from="BlueRifle" to="Player1" method="_on_blue_rifle_body_entered"]
+[connection signal="body_entered" from="RedRifle" to="Player2" method="_on_red_rifle_body_entered"]
+[connection signal="body_entered" from="BlueSaber" to="Player1" method="_on_blue_saber_body_entered"]
+[connection signal="body_entered" from="RedSaber" to="Player2" method="_on_red_saber_body_entered"]
+
+[editable path="Player1/MeleeWeapon1"]
+[editable path="Player2/MeleeWeapon2"]
