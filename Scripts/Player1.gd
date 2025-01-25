@@ -78,7 +78,6 @@ func _ready() -> void:
 
 # Physics processing: manages movement, state changes, and collisions
 func _physics_process(delta: float) -> void:
-	update_healthbar()
 	deadCheck()
 	
 	player_falling(delta)
@@ -269,18 +268,7 @@ func input_movement():
 	var direction : float = Input.get_axis("Move_Left", "Move_Right")
 	
 	return direction
-
-# Updates the health bar UI based on current health
-func update_healthbar():
-	var test_input = Input.is_action_just_pressed("Pressed_T_Key")
-	if test_input:
-		test_value = 1
-	currentHealth = currentHealth + test_value
-	test_value = 0
-	changed_health.emit(currentHealth)
 	
-	#create a body_entered signal/logic method so I can identify
-	#when a player enters things and emit the signal
 
 # Manages melee attack actions and states
 func melee_attack(delta : float):

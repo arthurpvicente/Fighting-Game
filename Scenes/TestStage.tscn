@@ -52,7 +52,7 @@ size = Vector2(10, 82)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwigc"]
 size = Vector2(6, 75)
 
-[node name="GameFighting" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 script = SubResource("GDScript_sm4w2")
 
 [node name="TestBg2" type="Sprite2D" parent="."]
