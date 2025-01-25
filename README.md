@@ -1,4 +1,4 @@
-# Fighiting game
+# **Fighiting game**
 
 ## **Overview**
 
