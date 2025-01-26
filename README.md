@@ -33,6 +33,6 @@ This is a fighting game developed as part of a college project. The game feature
 ## **How to Win**
 - The game ends when one player's health reaches zero.
 
-### **Credits**
+## **Credits**
 
 This project was created by a team of 5 students as part of a college assignment. 
