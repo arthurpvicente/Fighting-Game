@@ -4,6 +4,10 @@
 
 This is a fighting game developed as part of a college project. The game features fun and engaging combat mechanics where players can control characters in a 2D environment. The game was created by a team of five members, each contributing to different aspects of development such as gameplay design, coding, and audio.
 
+## The Game
+
+![Game](./Assets/Pictures/scrgame.png)
+
 ## **How to Play**
 
 1. **Start the game:**
@@ -34,6 +38,29 @@ This is a fighting game developed as part of a college project. The game feature
 ## **How to Win**
 
 - The game ends when one player's health reaches zero.
+
+## Installation
+
+1. Create a folder before cloning the repository
+
+    ```sh
+    mkdir NameOfFolder
+    ```
+3. Go to the folder that you created
+
+    ```sh
+    cd NameOfFolder
+    ```
+
+3. Clone the repository:
+
+    ```sh
+    git clone https://github.com/arthurpvicente/Fighting-Game
+    ```
+
+4. Open Godot Engine:
+    - Click in the `Import Project` or `Ctrl+I`
+    - Run the project
 
 ## **Author**
 
